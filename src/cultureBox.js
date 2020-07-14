@@ -7,7 +7,7 @@ function CultureBox(props) {
     return (
         <div className="CultureBox">
         <img src={sampleImage} className="CultureBoxImg" alt="CultureBoxImg" />
-        <h1>CultureBox</h1>
+        <h1 className="CultureBoxTitle" >CultureBox</h1>
         </div>
     );
     
