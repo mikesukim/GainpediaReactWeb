@@ -1,0 +1,13 @@
+.CultureBox {
+    border: 1px solid red;
+    width: 70%;
+    height : auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+.CultureBoxImg {
+    width: 50%;
+    object-fit: cover;
+
+  
+}
