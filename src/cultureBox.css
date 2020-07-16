@@ -1,20 +1,51 @@
 .CultureBox {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 857px;
     height : auto;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 .CultureBoxImg {
-    border: 1px solid green;
+    /* border: 1px solid green; */
+    /* object-fit: cover; */
     width: 100%;
     height: 400px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-bottom: 0px;
+    object-fit: cover;
+    display: block;
+
+}
+.CultureBoxContainer{
+    /* border: 1px solid red; */
+    display: flex;
 }
 .CultureBoxTitle{
-    border: 1px solid blue;
-    margin-top: 0px;
+    /* border: 1px solid blue; */
+    width: 50%;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: "Bitstream Charter";
+    text-align: left;
+    letter-spacing: 0.5px;
+    margin-top: 20px;
+}
+.CultureBoxInfo{
+    /* border: 1px solid blue; */
+    margin-left:auto;
+    align-self: flex-end;
+}
+.CultureBoxWriter{
+    /* border: 1px solid blue; */
+    text-align: right;
+    display: inline-block;
+    width: 77px;
+    height: 77px;
+    border-radius: 50%;
+    object-fit: cover;
+    font-family: "Bitstream Charter";
+    color: grey;
+    font-size: 23px;
+}
+.CultureBoxDate{
+    /* border: 1px solid blue; */
+    text-align: right;
+    display: inline-block;
 }
