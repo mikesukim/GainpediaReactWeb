@@ -1,6 +1,17 @@
+* {
+padding: 0;
+margin: 0;
+}
+
+img {
+  display: block; 
+}
+
 .App {
   text-align: center;
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 .App-logo {
