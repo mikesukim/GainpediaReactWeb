@@ -1,0 +1,25 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.CultureBox {
+    border: 1px solid red;
+    width: 857px;
+    height : auto;
+    margin: 0 auto;
+}
+.CultureBoxImg {
+    border: 1px solid green;
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+}
+.CultureBoxTitle{
+    border: 1px solid blue;
+    
+}

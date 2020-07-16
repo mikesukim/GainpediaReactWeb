@@ -2,8 +2,9 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Clock from './clock';
-import Togglebtn, {Yolo} from './togglebtn';
+import Togglebtn, {Yolo} from './togglebtn'; //Togglebtn is a default importing class. If it's not, it needs {}
 import Books from './books'
+import CultureBox from './cultureBox'
 
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from '@apollo/react-hooks';
@@ -39,6 +40,9 @@ function App() {
         <Togglebtn />
         <Yolo />
         <Books name = "Michael"/>
+        <CultureBox />
+        
+
 
         </ApolloProvider>
       </div>
