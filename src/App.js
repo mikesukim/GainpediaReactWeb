@@ -1,54 +1,102 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+
+//Import elements
 import Clock from './clock';
 import Togglebtn, {Yolo} from './togglebtn'; //Togglebtn is a default importing class. If it's not, it needs {}
 import Books from './books'
 import CultureBox from './cultureBox'
 
+//Import Server related Libraries
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from '@apollo/react-hooks';
 
+//Import React-Router
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
+
+//Connection to server
 const client = new ApolloClient({
   uri: 'http://gainpedia.dreamhosters.com/graphql',
 });
 
 
+
 function App() {
 
     return (
-      <div className="App">
-        <ApolloProvider client={client}>
-    
-  
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-        <h1> Hello, this is Michael and Welcome to my First ReactApp</h1>
-        <Clock />
-        <Togglebtn />
-        <Yolo />
-        <Books name = "Michael"/>
-        <CultureBox />
-        
+      <ApolloProvider client={client}>
+      <Router>
 
+        <div>
+          <nav>
+            <ul>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/cultureBox">CultureBox</Link>
+              </li>
+              <li>
+                <Link to="/clock">Clock</Link>
+              </li>
+            </ul>
+          </nav>
 
-        </ApolloProvider>
-      </div>
+          <Switch>
+          <Route path="/cultureBox">
+            <CultureBox />
+          </Route>
+          <Route path="/clock">
+            <Clock />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+
+        </div>
+
+      </Router>
+      </ApolloProvider>
     );
 
   
 }
+
+function Home() {
+  return (
+
+    <div className="App">
+    <header className="App-header">
+      <img src={logo} className="App-logo" alt="logo" />
+      <p>
+        Edit <code>src/App.js</code> and save to reload.
+      </p>
+      <a
+        className="App-link"
+        href="https://reactjs.org"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Learn React
+      </a>
+    </header>
+    <h1> Hello, this is Michael and Welcome to my First ReactApp</h1>
+    <Togglebtn />
+    <Yolo />
+    <Books name = "Michael"/>
+  </div>
+
+  );
+}
+
+
 
 export default App;
