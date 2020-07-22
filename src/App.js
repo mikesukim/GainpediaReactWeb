@@ -23,7 +23,8 @@ import {
 
 //Connection to server
 const client = new ApolloClient({
-  uri: 'http://gainpedia.dreamhosters.com/graphql',
+  // uri: 'http://gainpedia.dreamhosters.com/graphql',
+  uri: 'http://localhost:4000/graphql',
 });
 
 
