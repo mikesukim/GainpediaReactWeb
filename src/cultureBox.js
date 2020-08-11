@@ -1,7 +1,5 @@
 import React from 'react'
 import './cultureBox.css'
-import sampleImage from './images/sample.jpg'
-import sampleImage1 from './images/sample1.jpg'
 
 import gql from 'graphql-tag';
 import { useQuery } from '@apollo/react-hooks';
@@ -30,7 +28,7 @@ function CultureBox(props) {
     return data.posts.map(({ titleImgUrl, authorImgUrl }) => (
 
         <div className="CultureBox">
-            <img src={titleImgUrl} className="CultureBoxImg" alt={titleImgUrl} />
+            <img src="{titleImgUrl}" className="CultureBoxImg" alt={titleImgUrl} />
             <div className="CultureBoxContainer">
                 <div className="CultureBoxTitle" >Greeting, Michael.<br/> What's in your mind?</div>
                 <div className="CultureBoxInfo">

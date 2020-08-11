@@ -7,6 +7,7 @@ import Clock from './clock';
 import Togglebtn, {Yolo} from './togglebtn'; //Togglebtn is a default importing class. If it's not, it needs {}
 import Books from './books'
 import CultureBox from './cultureBox'
+import Jiyun from './jiyun'
 
 //Import Server related Libraries
 import ApolloClient from 'apollo-boost';
@@ -47,10 +48,16 @@ function App() {
               <li>
                 <Link to="/clock">Clock</Link>
               </li>
+              <li>
+                <Link to="/jiyun">Jiyun</Link>
+              </li>
             </ul>
           </nav>
 
           <Switch>
+          <Route path="/jiyun">
+            <Jiyun />
+          </Route>
           <Route path="/cultureBox">
             <CultureBox />
           </Route>
