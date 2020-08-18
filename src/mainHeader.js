@@ -1,5 +1,12 @@
-import React,{useRef,useCallback} from 'react';
+import React,{useRef} from 'react';
+
+//Import Hooks
 import useOutsideAlerter from "./hooks/useOutsideAlerter"
+
+//Import React-Router
+import {
+    Link
+  } from "react-router-dom";
 
 export default function MainHeader(props){
 
@@ -8,17 +15,18 @@ export default function MainHeader(props){
     
     useOutsideAlerter(wrapperRef, ()=>{setIsOpen(false)});
 
-    return( 
+    return(
+        
         <header>  
             <div className="mx-auto headergrid" style={{display: 'grid'}}> 
-            <div><a href="index.html" id="logo">GAINPEDIA</a>
+            <div><Link to="/" id="logo">GAINPEDIA</Link>
             </div>
             <div className="nav">
-                <a href="index.html" style={{marginRight: '10px'}}>Blog</a>
+                <Link to="/blog" style={{marginRight: '10px'}}>Blog</Link>   
             </div>
-            <div className="nav">     
-                <a href="about.html">About</a>
-            </div>     
+            <div className="nav">  
+                <Link to="/about">About</Link>   
+            </div>   
             <div className={isOpen ? "menu change" : "menu"} id="menubar" onClick={() => setIsOpen(!isOpen)} ref={wrapperRef}>
                 <div className="bar1" />
                 <div className="bar2" />
@@ -27,11 +35,11 @@ export default function MainHeader(props){
                 <ul className="dropdown">
                     <li><a href="index.html">Blog</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="#">What Else</a></li>
                 </ul>        
                 </div>
             </div>     
             </div>      
         </header>
+
     );
 }
