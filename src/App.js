@@ -7,6 +7,8 @@ import PostsGrid from './postsGrid'
 import CultureBox from './cultureBox'
 import ReadMore from './readMore'
 import MainHeader from './mainHeader'
+import BlogEditor from './blogEditor'
+import BlogChecker from './blogChecker'
 
 //Import Server related Libraries
 import ApolloClient from 'apollo-boost';
@@ -16,8 +18,7 @@ import { ApolloProvider } from '@apollo/react-hooks';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
 //Connection to server
@@ -47,6 +48,14 @@ function App() {
               <ReactHome />
               <CultureBox />
               <Clock />
+            </Route>
+            <Route path="/editor">
+              <MainHeader />
+              <BlogEditor />
+            </Route>
+            <Route path="/checker">
+              <MainHeader />
+              <BlogChecker />
             </Route>
         </Switch>
       </Router>

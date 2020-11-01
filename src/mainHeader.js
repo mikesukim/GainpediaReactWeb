@@ -22,10 +22,10 @@ export default function MainHeader(props){
             <div><Link to="/" id="logo">GAINPEDIA</Link>
             </div>
             <div className="nav">
-                <Link to="/blog" style={{marginRight: '10px'}}>Blog</Link>   
+                <Link to="/editor" style={{marginRight: '10px'}}>Blog</Link>   
             </div>
             <div className="nav">  
-                <Link to="/about">About</Link>   
+                <Link to="/checker">About</Link>   
             </div>   
             <div className={isOpen ? "menu change" : "menu"} id="menubar" onClick={() => setIsOpen(!isOpen)} ref={wrapperRef}>
                 <div className="bar1" />
@@ -33,8 +33,8 @@ export default function MainHeader(props){
                 <div className="bar3" />
                 <div className={isOpen ? "dropdown-toggle show" : "dropdown-toggle"} id="myDropdown">
                 <ul className="dropdown">
-                    <li><a href="index.html">Blog</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><Link to="/editor">Blog</Link></li>
+                    <li><Link to="/checker">About</Link></li>
                 </ul>        
                 </div>
             </div>     
